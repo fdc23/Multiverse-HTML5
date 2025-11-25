@@ -1,0 +1,29 @@
+/* Lightweight animated backdrop for Section 2 */
+.gallery-two {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-two::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle at 15% 25%, rgba(78, 86, 102, 0.07), transparent 32%),
+              radial-gradient(circle at 75% 20%, rgba(34, 40, 52, 0.05), transparent 36%),
+              linear-gradient(180deg, rgba(240, 240, 243, 0.9), rgba(235, 235, 238, 0.82));
+  background-size: 170% 170%;
+  animation: fotografiaSectionTwoWave 28s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery-two > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fotografiaSectionTwoWave {
+  0% { transform: translate3d(1%, -1%, 0) scale(1.03); background-position: 15% 25%, 75% 20%, 50% 0%; }
+  50% { transform: translate3d(-1%, 1%, 0) scale(1.04); background-position: 20% 40%, 68% 18%, 50% 40%; }
+  100% { transform: translate3d(0, 1.5%, 0) scale(1.03); background-position: 10% 30%, 80% 24%, 50% 80%; }
+}

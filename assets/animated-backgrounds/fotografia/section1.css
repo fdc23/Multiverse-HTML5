@@ -1,0 +1,29 @@
+/* Lightweight animated backdrop for Section 1 */
+.gallery-one {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-one::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle at 20% 20%, rgba(128, 180, 255, 0.16), transparent 30%),
+              radial-gradient(circle at 80% 30%, rgba(104, 132, 255, 0.12), transparent 35%),
+              linear-gradient(120deg, rgba(236, 244, 255, 0.32), rgba(218, 231, 255, 0.16));
+  background-size: 180% 180%;
+  animation: fotografiaSectionOneDrift 26s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery-one > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fotografiaSectionOneDrift {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1.04); background-position: 10% 20%, 80% 30%, 0% 50%; }
+  50% { transform: translate3d(1%, 1%, 0) scale(1.06); background-position: 20% 40%, 70% 20%, 50% 60%; }
+  100% { transform: translate3d(-1%, 2%, 0) scale(1.05); background-position: 30% 25%, 60% 35%, 100% 50%; }
+}
