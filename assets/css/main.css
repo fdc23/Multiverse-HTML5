@@ -1779,6 +1779,37 @@ text-transform: uppercase;
 width: 100%;
 }
 
+.gallery-section:first-of-type {
+padding-top: 1.25rem;
+}
+
+.section-label {
+align-items: center;
+display: -moz-flex;
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+gap: 0.85rem;
+margin: 0 0 1.25rem;
+padding: 0 0.35rem;
+width: 100%;
+}
+
+.section-title {
+color: #d8e0ec;
+font-size: 0.95rem;
+font-weight: 600;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+}
+
+.section-divider {
+background: linear-gradient(90deg, rgba(216, 224, 236, 0.5), rgba(216, 224, 236, 0));
+border-radius: 999px;
+flex: 1;
+height: 1px;
+}
+
 .gallery-one {
 background: #f5f9ff;
 }
@@ -2312,9 +2343,9 @@ text-align: center;
                 }
 
                 #page-footer .copyright {
-                        color: #a0a0a1;
+                        color: #d3d6dc;
                         font-size: 0.95em;
-                        letter-spacing: 0.05em;
+                        letter-spacing: 0.06em;
                         margin: 0;
                 }
 
@@ -2327,7 +2358,11 @@ text-align: center;
                 }
 
                         #page-footer .icons a {
-                                color: #ffffff;
+                                color: rgba(255, 255, 255, 0.65);
+                                font-size: 1.05em;
+                                padding: 0.25em;
+                                border-radius: 0.35em;
+                                text-decoration: none;
                         }
 
                         #page-footer .icons a:hover {
