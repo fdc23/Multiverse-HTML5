@@ -162,9 +162,9 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background: #242629;
-	}
+        body {
+                background: #f5f6f8;
+        }
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -1519,9 +1519,9 @@ input, select, textarea {
 
 /* Header */
 
-	body {
-		padding: 0 0 4em 0;
-	}
+        body {
+                padding: 0;
+        }
 
 	#header {
 		-moz-transform: translateY(0);
@@ -1653,11 +1653,11 @@ input, select, textarea {
 
 /* Main */
 
-	#main {
-		-moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
-		-webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
-		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
-		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
+        #main {
+                -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
+                -webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+                -ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
+                transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
 		display: -moz-flex;
 		display: -webkit-flex;
                 display: -ms-flex;
@@ -1670,8 +1670,10 @@ input, select, textarea {
                 -webkit-flex: 1 0 auto;
                 -ms-flex: 1 0 auto;
                 flex: 1 0 auto;
-                padding: 1.5em 1.5em 2.5em;
+                padding: 0;
+                gap: 0;
                 -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+                background: #ffffff;
         }
 
 		#main .thumb {
@@ -1715,15 +1717,17 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			#main .thumb > h2 {
-				pointer-events: none;
-				bottom: 1.875em;
-				font-size: 0.8em;
-				left: 2.1875em;
-				margin: 0;
-				position: absolute;
-				z-index: 1;
-			}
+                        #main .thumb > h2 {
+                                pointer-events: none;
+                                bottom: 1.5em;
+                                font-size: 0.75em;
+                                left: 1.75em;
+                                margin: 0;
+                                max-width: calc(100% - 3.5em);
+                                line-height: 1.4;
+                                position: absolute;
+                                z-index: 1;
+                        }
 
 			#main .thumb > p {
 				display: none;
@@ -1775,15 +1779,9 @@ input, select, textarea {
                         -webkit-transition-delay: 2.525s;
                         -ms-transition-delay: 2.525s;
                         transition-delay: 2.525s;
-<<<<<<< HEAD
-                        height: calc(25vh - 1.5em);
-                        min-height: 10em;
+                        height: 18vh;
+                        min-height: 8em;
                         width: 12.5%;
-=======
-                        height: calc(30vh - 1.5em);
-                        min-height: 14em;
-                        width: 16.66667%;
->>>>>>> codex/scale-images-for-horizontal-row
                 }
 
 			#main .thumb:nth-child(1) {
@@ -1877,15 +1875,9 @@ input, select, textarea {
                                 -webkit-transition-delay: 2.075s;
                                 -ms-transition-delay: 2.075s;
                                 transition-delay: 2.075s;
-<<<<<<< HEAD
-                                height: calc(25vh - 1.5em);
-                                min-height: 10em;
+                                height: 18vh;
+                                min-height: 8em;
                                 width: 12.5%;
-=======
-                                height: calc(32vh - 1.5em);
-                                min-height: 16em;
-                                width: 20%;
->>>>>>> codex/scale-images-for-horizontal-row
                         }
 
 				#main .thumb:nth-child(1) {
@@ -1960,15 +1952,9 @@ input, select, textarea {
                                 -webkit-transition-delay: 1.625s;
                                 -ms-transition-delay: 1.625s;
                                 transition-delay: 1.625s;
-<<<<<<< HEAD
-                                height: calc(22vh - 1.25em);
-                                min-height: 10em;
-                                width: 20%;
-=======
-                                height: calc(32vh - 1.5em);
-                                min-height: 16em;
-                                width: 33.33333%;
->>>>>>> codex/scale-images-for-horizontal-row
+                                height: 18.5vh;
+                                min-height: 8.5em;
+                                width: 16.66667%;
                         }
 
 				#main .thumb:nth-child(1) {
@@ -2022,8 +2008,8 @@ input, select, textarea {
                                 -webkit-transition-delay: 2.075s;
                                 -ms-transition-delay: 2.075s;
                                 transition-delay: 2.075s;
-                                height: calc(22vh - 1em);
-                                min-height: 9em;
+                                height: 19vh;
+                                min-height: 8em;
                                 width: 25%;
                         }
 
@@ -2099,8 +2085,8 @@ input, select, textarea {
                                 -webkit-transition-delay: 1.175s;
                                 -ms-transition-delay: 1.175s;
                                 transition-delay: 1.175s;
-                                height: calc(25vh - 1em);
-                                min-height: 10em;
+                                height: 21vh;
+                                min-height: 9em;
                                 width: 100%;
                         }
 
@@ -2132,7 +2118,8 @@ input, select, textarea {
         #page-footer {
                 background: #1e1f23;
                 border-top: solid 1px rgba(255, 255, 255, 0.08);
-                padding: 2em 1.5em;
+                padding: 0.75em 1.5em;
+                margin-top: auto;
                 text-align: center;
         }
 
