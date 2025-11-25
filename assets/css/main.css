@@ -1775,9 +1775,15 @@ input, select, textarea {
                         -webkit-transition-delay: 2.525s;
                         -ms-transition-delay: 2.525s;
                         transition-delay: 2.525s;
+<<<<<<< HEAD
                         height: calc(25vh - 1.5em);
                         min-height: 10em;
                         width: 12.5%;
+=======
+                        height: calc(30vh - 1.5em);
+                        min-height: 14em;
+                        width: 16.66667%;
+>>>>>>> codex/scale-images-for-horizontal-row
                 }
 
 			#main .thumb:nth-child(1) {
@@ -1864,16 +1870,22 @@ input, select, textarea {
 				transition-delay: 2.3s;
 			}
 
-		@media screen and (max-width: 1680px) {
+                @media screen and (max-width: 1680px) {
 
                         #main .thumb {
                                 -moz-transition-delay: 2.075s;
                                 -webkit-transition-delay: 2.075s;
                                 -ms-transition-delay: 2.075s;
                                 transition-delay: 2.075s;
+<<<<<<< HEAD
                                 height: calc(25vh - 1.5em);
                                 min-height: 10em;
                                 width: 12.5%;
+=======
+                                height: calc(32vh - 1.5em);
+                                min-height: 16em;
+                                width: 20%;
+>>>>>>> codex/scale-images-for-horizontal-row
                         }
 
 				#main .thumb:nth-child(1) {
@@ -1948,9 +1960,15 @@ input, select, textarea {
                                 -webkit-transition-delay: 1.625s;
                                 -ms-transition-delay: 1.625s;
                                 transition-delay: 1.625s;
+<<<<<<< HEAD
                                 height: calc(22vh - 1.25em);
                                 min-height: 10em;
                                 width: 20%;
+=======
+                                height: calc(32vh - 1.5em);
+                                min-height: 16em;
+                                width: 33.33333%;
+>>>>>>> codex/scale-images-for-horizontal-row
                         }
 
 				#main .thumb:nth-child(1) {
@@ -2074,16 +2092,16 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+                @media screen and (max-width: 480px) {
 
                         #main .thumb {
                                 -moz-transition-delay: 1.175s;
                                 -webkit-transition-delay: 1.175s;
                                 -ms-transition-delay: 1.175s;
                                 transition-delay: 1.175s;
-                                height: calc(20vh - 1em);
-                                min-height: 7em;
-                                width: 25%;
+                                height: calc(25vh - 1em);
+                                min-height: 10em;
+                                width: 100%;
                         }
 
 				#main .thumb:nth-child(1) {
