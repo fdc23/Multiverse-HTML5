@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:300,300italic,400,400italic&display=swap");
 
 /*
 	Multiverse by HTML5 UP
@@ -1464,10 +1464,8 @@ input, select, textarea {
 
         #top-nav {
                 align-items: center;
-                background: rgba(36, 38, 41, 0.95);
-                -moz-backdrop-filter: blur(6px);
-                -webkit-backdrop-filter: blur(6px);
-                backdrop-filter: blur(6px);
+                background: #0f0f11;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
                 display: -moz-flex;
                 display: -webkit-flex;
                 display: -ms-flex;
@@ -1479,7 +1477,7 @@ input, select, textarea {
                 -moz-align-items: center;
                 -webkit-align-items: center;
                 -ms-align-items: center;
-                padding: 1.5em 2em;
+                padding: 0.9em 2em;
                 position: sticky;
                 top: 0;
                 width: 100%;
@@ -1487,10 +1485,11 @@ input, select, textarea {
         }
 
                 #top-nav .logo-placeholder {
-                        color: #ffffff;
-                        font-size: 1em;
-                        font-weight: 700;
-                        letter-spacing: 0.08em;
+                        color: #f8f2ec;
+                        font-family: "Times New Roman", Times, serif;
+                        font-size: 1.35em;
+                        font-weight: 600;
+                        letter-spacing: 0.04em;
                 }
 
                 #top-nav .nav-links ul {
@@ -1501,20 +1500,23 @@ input, select, textarea {
                         -moz-align-items: center;
                         -webkit-align-items: center;
                         -ms-align-items: center;
-                        gap: 1.5em;
+                        gap: 1.25em;
                         margin: 0;
                         padding: 0;
                 }
 
                         #top-nav .nav-links a {
-                                color: #ffffff;
+                                color: #d6d8de;
                                 font-size: 0.95em;
                                 letter-spacing: 0.05em;
+                                padding: 0.15em 0;
                                 text-decoration: none;
+                                border-bottom: 2px solid transparent;
                         }
 
                         #top-nav .nav-links a:hover {
-                                color: #50c8ff;
+                                color: #ffffff;
+                                border-color: #ffffff;
                         }
 
 /* Header */
@@ -1670,7 +1672,7 @@ flex-direction: column;
 -webkit-flex: 1 0 auto;
 -ms-flex: 1 0 auto;
 flex: 1 0 auto;
-padding: 1.5rem;
+padding: 1.5rem 1.5rem 0;
 gap: 2.5rem;
 -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 background: transparent;
@@ -1689,7 +1691,7 @@ flex-wrap: wrap;
 -webkit-flex: 1 0 auto;
 -ms-flex: 1 0 auto;
 flex: 1 0 auto;
-padding: 2rem 1.5rem;
+padding: 2rem 1rem;
 gap: 0;
 -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 background: #ffffff;
@@ -1701,7 +1703,37 @@ background: #f5f9ff;
 }
 
 .gallery-two {
-background: #fdf7f2;
+  background: url('https://cdn.didas.cl/img/111.webp') center center / cover no-repeat;
+  border-radius: 0;
+  color: #ffffff;
+  margin-left: -1.5rem;
+margin-right: -1.5rem;
+width: calc(100% + 3rem);
+}
+
+#main .thumb > .image img {
+display: block;
+height: 100%;
+object-fit: cover;
+object-position: center;
+width: 100%;
+}
+
+.gallery-one .thumb > .image img {
+box-shadow: 0 10px 20px rgba(14, 36, 64, 0.16);
+outline: 2px solid rgba(225, 233, 250, 0.9);
+outline-offset: -2px;
+}
+
+.gallery-two .thumb > .image img {
+box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+outline: 2px solid rgba(255, 255, 255, 0.9);
+outline-offset: -2px;
+}
+
+.gallery-two .thumb > h2,
+.gallery-two .thumb > p {
+color: #ffffff;
 }
 
 #main .thumb {
@@ -1803,13 +1835,16 @@ position: relative;
 		}
 
 #main .thumb {
--moz-transition-delay: 2.525s;
--webkit-transition-delay: 2.525s;
--ms-transition-delay: 2.525s;
-transition-delay: 2.525s;
-height: 15vh;
-min-height: 7em;
-width: 10%;
+  -moz-transition-delay: 2.525s;
+  -webkit-transition-delay: 2.525s;
+  -ms-transition-delay: 2.525s;
+  transition-delay: 2.525s;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  min-height: 7em;
+  margin: 0;
+  padding: 0;
+  width: 12.5%;
 }
 
 			#main .thumb:nth-child(1) {
@@ -1903,9 +1938,9 @@ width: 10%;
 -webkit-transition-delay: 2.075s;
 -ms-transition-delay: 2.075s;
 transition-delay: 2.075s;
-height: 15vh;
-min-height: 7em;
-width: 10%;
+height: auto;
+min-height: 6.75em;
+width: 12.5%;
 }
 
 				#main .thumb:nth-child(1) {
@@ -1980,8 +2015,8 @@ width: 10%;
 -webkit-transition-delay: 1.625s;
 -ms-transition-delay: 1.625s;
 transition-delay: 1.625s;
-height: 15.5vh;
-min-height: 7.5em;
+height: auto;
+min-height: 7em;
 width: 14.28571%;
 }
 
@@ -2036,8 +2071,8 @@ width: 14.28571%;
 -webkit-transition-delay: 2.075s;
 -ms-transition-delay: 2.075s;
 transition-delay: 2.075s;
-height: 16.5vh;
-min-height: 7.5em;
+height: auto;
+min-height: 6.75em;
 width: 20%;
 }
 
@@ -2113,9 +2148,9 @@ width: 20%;
 -webkit-transition-delay: 1.175s;
 -ms-transition-delay: 1.175s;
 transition-delay: 1.175s;
-height: 20vh;
-min-height: 8.5em;
-width: 100%;
+height: auto;
+min-height: 7.5em;
+width: 33.3333%;
 }
 
 				#main .thumb:nth-child(1) {
@@ -2144,9 +2179,9 @@ width: 100%;
 /* Footer */
 
         #page-footer {
-                background: #1e1f23;
+                background: #0d0f12;
                 border-top: solid 1px rgba(255, 255, 255, 0.08);
-                padding: 0.75em 1.5em;
+                padding: 1.75em 1.5em;
                 margin-top: auto;
                 text-align: center;
         }
@@ -2165,9 +2200,9 @@ width: 100%;
                 }
 
                 #page-footer .copyright {
-                        color: #a0a0a1;
+                        color: #d3d6dc;
                         font-size: 0.95em;
-                        letter-spacing: 0.05em;
+                        letter-spacing: 0.06em;
                         margin: 0;
                 }
 
@@ -2180,9 +2215,13 @@ width: 100%;
                 }
 
                         #page-footer .icons a {
-                                color: #ffffff;
+                                color: rgba(255, 255, 255, 0.65);
+                                font-size: 1.05em;
+                                padding: 0.25em;
+                                border-radius: 0.35em;
+                                text-decoration: none;
                         }
 
                         #page-footer .icons a:hover {
-                                color: #50c8ff;
+                                color: #ffffff;
                         }
