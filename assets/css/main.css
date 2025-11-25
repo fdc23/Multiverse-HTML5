@@ -2074,16 +2074,16 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+                @media screen and (max-width: 480px) {
 
                         #main .thumb {
                                 -moz-transition-delay: 1.175s;
                                 -webkit-transition-delay: 1.175s;
                                 -ms-transition-delay: 1.175s;
                                 transition-delay: 1.175s;
-                                height: calc(20vh - 1em);
-                                min-height: 7em;
-                                width: 25%;
+                                height: calc(25vh - 1em);
+                                min-height: 10em;
+                                width: 100%;
                         }
 
 				#main .thumb:nth-child(1) {
