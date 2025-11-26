@@ -1,0 +1,57 @@
+/* Lightweight animated backdrop for Section 2 */
+.gallery-two {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.gallery-two::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle at 12% 22%, rgba(60, 70, 92, 0.08), transparent 34%),
+              radial-gradient(circle at 78% 24%, rgba(25, 30, 42, 0.06), transparent 38%),
+              linear-gradient(185deg, rgba(255, 255, 255, 0.96), rgba(232, 233, 236, 0.88)),
+              repeating-linear-gradient(160deg, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.05) 10px, transparent 10px, transparent 26px);
+  background-size: 190% 190%, 190% 190%, 170% 170%, 240% 240%;
+  animation: fotografiaSectionTwoWave 26s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery-two::after {
+  content: '';
+  position: absolute;
+  inset: -5%;
+  background: radial-gradient(circle at 60% 70%, rgba(80, 90, 110, 0.08), transparent 42%),
+              radial-gradient(circle at 30% 25%, rgba(30, 36, 50, 0.08), transparent 38%);
+  mix-blend-mode: multiply;
+  animation: fotografiaSectionTwoGlow 18s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery-two > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fotografiaSectionTwoWave {
+  0% {
+    transform: translate3d(1%, -1%, 0) scale(1.03);
+    background-position: 12% 20%, 78% 22%, 50% 0%, 0% 0%;
+  }
+  50% {
+    transform: translate3d(-1%, 1.5%, 0) scale(1.05);
+    background-position: 20% 38%, 68% 16%, 52% 34%, 40% 45%;
+  }
+  100% {
+    transform: translate3d(0, 1.5%, 0) scale(1.03);
+    background-position: 8% 30%, 82% 24%, 50% 74%, 100% 80%;
+  }
+}
+
+@keyframes fotografiaSectionTwoGlow {
+  0% { opacity: 0.25; transform: translate3d(-1%, 0, 0) scale(1.02); }
+  100% { opacity: 0.5; transform: translate3d(1%, -1%, 0) scale(1.05); }
+}
