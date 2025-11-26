@@ -183,8 +183,8 @@ position: relative;
 }
 
 .content-loader {
-position: absolute;
-top: 0;
+position: fixed;
+top: var(--nav-height);
 left: 0;
 right: 0;
 bottom: 0;
