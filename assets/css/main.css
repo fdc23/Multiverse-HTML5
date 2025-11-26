@@ -169,6 +169,7 @@ input, select, textarea {
 	}
 
 :root {
+        /* Keep this in sync with the top navigation height. */
         --nav-height: 52px;
 }
 
@@ -182,20 +183,20 @@ position: relative;
 }
 
 .content-loader {
-position: fixed;
-top: var(--nav-height);
+position: absolute;
+top: 0;
 left: 0;
 right: 0;
 bottom: 0;
 display: flex;
 align-items: center;
 justify-content: center;
-background: rgba(0, 0, 0, 0.9);
+background: rgba(0, 0, 0, 1);
 opacity: 1;
 visibility: visible;
 pointer-events: auto;
 transition: opacity 0.45s ease, visibility 0.45s ease;
-z-index: 4;
+z-index: 5;
 }
 
 .content-loader.is-done {
@@ -2303,11 +2304,6 @@ max-width: calc(20% - 0.2rem);
 #main .thumb.portrait {
   flex: 0 0 calc(16.6667% - 0.2rem);
   max-width: calc(16.6667% - 0.2rem);
-  min-height: 6em;
-}
-
-#main .thumb.portrait {
-  width: 16.6667%;
   min-height: 6em;
 }
 
