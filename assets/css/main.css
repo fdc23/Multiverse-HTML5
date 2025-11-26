@@ -1863,6 +1863,7 @@ flex: 1 0 auto;
         border-radius: 0;
         margin: 0;
         position: relative;
+        scroll-margin-top: calc(var(--nav-height) + 12px);
         width: 100%;
 }
 
