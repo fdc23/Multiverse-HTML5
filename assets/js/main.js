@@ -210,74 +210,91 @@
 
 	// Main.
 		var $main = $('#main');
+		var poptroxReady = false;
 
-		// Thumbs.
-			$main.children('.thumb').each(function() {
+		var initializePoptrox = function() {
 
-				var	$this = $(this),
-					$image = $this.find('.image'), $image_img = $image.children('img'),
-					x;
+			if (poptroxReady)
+				return;
 
-				// No image? Bail.
-					if ($image.length == 0)
-						return;
+			if ($main.find('.thumb > a.image').length === 0)
+				return;
 
-				// Image.
-				// This sets the background of the "image" <span> to the image pointed to by its child
-				// <img> (which is then hidden). Gives us way more flexibility.
+			// Thumbs.
+				$main.children('.thumb').each(function() {
 
-					// Set background.
-						$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
+					var	$this = $(this),
+						$image = $this.find('.image'), $image_img = $image.children('img'),
+						x;
 
-					// Set background position.
-						if (x = $image_img.data('position'))
-							$image.css('background-position', x);
+					// No image? Bail.
+						if ($image.length == 0)
+							return;
 
-					// Hide original img.
-						$image_img.hide();
+					// Image.
+					// This sets the background of the "image" <span> to the image pointed to by its child
+					// <img> (which is then hidden). Gives us way more flexibility.
 
-			});
+						// Set background.
+							$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
 
-		// Poptrox.
-			$main.poptrox({
-				baseZIndex: 20000,
-				caption: function($a) {
+						// Set background position.
+							if (x = $image_img.data('position'))
+								$image.css('background-position', x);
 
-					var s = '';
+						// Hide original img.
+							$image_img.hide();
 
-					$a.nextAll().each(function() {
-						s += this.outerHTML;
+				});
+
+			// Poptrox.
+				$main.poptrox({
+					baseZIndex: 20000,
+					caption: function($a) {
+
+						var s = '';
+
+						$a.nextAll().each(function() {
+							s += this.outerHTML;
+						});
+
+						return s;
+
+					},
+					fadeSpeed: 300,
+					onPopupClose: function() { $body.removeClass('modal-active'); },
+					onPopupOpen: function() { $body.addClass('modal-active'); },
+					overlayOpacity: 0,
+					popupCloserText: '',
+					popupHeight: 150,
+					popupLoaderText: '',
+					popupSpeed: 300,
+					popupWidth: 150,
+					selector: '.thumb > a.image',
+					usePopupCaption: true,
+					usePopupCloser: true,
+					usePopupDefaultStyling: false,
+					usePopupForceClose: true,
+					usePopupLoader: true,
+					usePopupNav: true,
+					windowMargin: 50
+				});
+
+				// Hack: Set margins to 0 when 'xsmall' activates.
+					breakpoints.on('<=xsmall', function() {
+						$main[0]._poptrox.windowMargin = 0;
 					});
 
-					return s;
+					breakpoints.on('>xsmall', function() {
+						$main[0]._poptrox.windowMargin = 50;
+					});
 
-				},
-				fadeSpeed: 300,
-				onPopupClose: function() { $body.removeClass('modal-active'); },
-				onPopupOpen: function() { $body.addClass('modal-active'); },
-				overlayOpacity: 0,
-				popupCloserText: '',
-				popupHeight: 150,
-				popupLoaderText: '',
-				popupSpeed: 300,
-				popupWidth: 150,
-				selector: '.thumb > a.image',
-				usePopupCaption: true,
-				usePopupCloser: true,
-				usePopupDefaultStyling: false,
-				usePopupForceClose: true,
-				usePopupLoader: true,
-				usePopupNav: true,
-				windowMargin: 50
-			});
 
-			// Hack: Set margins to 0 when 'xsmall' activates.
-				breakpoints.on('<=xsmall', function() {
-					$main[0]._poptrox.windowMargin = 0;
-				});
+                                poptroxReady = true;
 
-				breakpoints.on('>xsmall', function() {
-					$main[0]._poptrox.windowMargin = 50;
-				});
+                };
+
+                document.addEventListener('thumbnails:rendered', initializePoptrox);
+                $(initializePoptrox);
 
 })(jQuery);
