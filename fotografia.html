@@ -36,6 +36,12 @@
                                                                         <li><a href="#menu-2">Section 2</a></li>
                                                                 </ul>
                                                         </li>
+                                                        <li class="has-submenu"><a href="audiovisual.html">Audiovisual</a>
+                                                                <ul class="submenu">
+                                                                        <li><a href="audiovisual.html#menu-1">Section 1</a></li>
+                                                                        <li><a href="audiovisual.html#menu-2">Section 2</a></li>
+                                                                </ul>
+                                                        </li>
                                                 </ul>
                                         </nav>
                                 </header>
@@ -58,23 +64,9 @@
                 <span class="content-loader__label">Cargando</span>
         </div>
 </div>
-<div class="section-shell">
-<section id="menu-1" class="gallery-section gallery-one" data-gallery-key="sectionOne">
-<header class="section-label">
-<span class="section-title">Section 1</span>
-<span class="section-divider" aria-hidden="true"></span>
-</header>
-<p class="section-meta">2025 Club Palestino – Evento Carolina Saieh – Fotografía</p>
-<!-- Gallery items injected from assets/js/thumbnails/fotografia-config.js -->
-</section>
-<section id="menu-2" class="gallery-section gallery-two" data-gallery-key="sectionTwo">
-<header class="section-label">
-<span class="section-title">Section 2</span>
-<span class="section-divider" aria-hidden="true"></span>
-</header>
-<p class="section-meta">2025 Club Palestino – Evento Carolina Saieh – Fotografía</p>
-<!-- Gallery items injected from assets/js/thumbnails/fotografia-config.js -->
-</section>
+<div class="section-shell" data-section-root="sections/fotografia">
+  <div class="section-fragment" data-section-src="section1.html"></div>
+  <div class="section-fragment" data-section-src="section2.html"></div>
 </div>
 </div>
                                 <!-- Footer -->
@@ -92,12 +84,13 @@
                         </div>
 
                 <!-- Scripts -->
-                        <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.poptrox.min.js"></script>
                         <script src="assets/js/browser.min.js"></script>
                         <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/thumbnails/fotografia-config.js"></script>
 <script src="assets/js/thumbnails/loader.js"></script>
+<script src="assets/js/section-loader.js"></script>
                         <script src="assets/js/content-loader.js"></script>
                         <script src="assets/js/util.js"></script>
                         <script src="assets/js/main.js"></script>

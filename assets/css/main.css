@@ -1920,6 +1920,22 @@ object-position: center;
 width: 100%;
 }
 
+.thumb-video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+}
+
+.thumb-video iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+}
+
 .gallery-one .thumb > .image img,
 .gallery-two .thumb > .image img {
         box-shadow: 0 8px 18px rgba(12, 22, 38, 0.12);
@@ -2052,11 +2068,19 @@ position: relative;
   max-width: calc(12.5% - 0.2rem);
 }
 
+#main .thumb.video {
+  aspect-ratio: 16 / 9;
+}
+
 #main .thumb.portrait {
   aspect-ratio: 9 / 16;
   min-height: 6.5em;
   flex: 0 0 calc(8.3333% - 0.2rem);
   max-width: calc(8.3333% - 0.2rem);
+}
+
+#main .thumb.portrait.video {
+  aspect-ratio: 9 / 16;
 }
 
 			#main .thumb:nth-child(1) {
