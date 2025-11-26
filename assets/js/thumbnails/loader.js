@@ -63,6 +63,8 @@
 
       section.appendChild(fragment);
     });
+
+    document.dispatchEvent(new CustomEvent('thumbnails:rendered', { detail: { sections: config.sections } }));
   };
 
   window.renderThumbnails = render;
