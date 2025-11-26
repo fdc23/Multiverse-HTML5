@@ -2462,9 +2462,9 @@ text-align: center;
                 }
 
                 #page-footer .copyright {
-                        color: #d3d6dc;
+                        color: #a0a0a1;
                         font-size: 0.95em;
-                        letter-spacing: 0.06em;
+                        letter-spacing: 0.05em;
                         margin: 0;
                 }
 
@@ -2477,11 +2477,7 @@ text-align: center;
                 }
 
                         #page-footer .icons a {
-                                color: rgba(255, 255, 255, 0.65);
-                                font-size: 1.05em;
-                                padding: 0.25em;
-                                border-radius: 0.35em;
-                                text-decoration: none;
+                                color: #ffffff;
                         }
 
                         #page-footer .icons a:hover {
