@@ -30,14 +30,12 @@
 	// Transitions supported?
 		if (browser.canUse('transition')) {
 
-                        // Play initial animations as soon as DOM is ready so
-                        // thumbnail fades can start while the content loader
-                        // curtain is still covering the canvas.
-                                $(function() {
-                                        window.requestAnimationFrame(function() {
-                                                $body.removeClass('is-preload');
-                                        });
-                                });
+			// Play initial animations on page load.
+				$window.on('load', function() {
+					window.setTimeout(function() {
+						$body.removeClass('is-preload');
+					}, 100);
+				});
 
 			// Prevent transitions/animations on resize.
 				var resizeTimeout;
