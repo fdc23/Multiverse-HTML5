@@ -2,6 +2,7 @@
 .gallery-two {
   position: relative;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .gallery-two::before {
@@ -10,8 +11,8 @@
   inset: -8%;
   background: radial-gradient(circle at 12% 22%, rgba(60, 70, 92, 0.08), transparent 34%),
               radial-gradient(circle at 78% 24%, rgba(25, 30, 42, 0.06), transparent 38%),
-              linear-gradient(185deg, rgba(242, 242, 246, 0.94), rgba(232, 233, 236, 0.85)),
-              repeating-linear-gradient(160deg, rgba(0, 0, 0, 0.04) 0, rgba(0, 0, 0, 0.04) 10px, transparent 10px, transparent 26px);
+              linear-gradient(185deg, rgba(255, 255, 255, 0.96), rgba(232, 233, 236, 0.88)),
+              repeating-linear-gradient(160deg, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.05) 10px, transparent 10px, transparent 26px);
   background-size: 190% 190%, 190% 190%, 170% 170%, 240% 240%;
   animation: fotografiaSectionTwoWave 26s ease-in-out infinite;
   pointer-events: none;
