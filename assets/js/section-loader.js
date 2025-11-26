@@ -1,4 +1,5 @@
 (function() {
+
   function buildFallback(container) {
     const sectionId = container.dataset.sectionId || '';
     const config = (window.thumbnailsConfig && Array.isArray(window.thumbnailsConfig.sections))
@@ -45,6 +46,14 @@
       buildFallback(container);
       return;
     }
+
+  async function loadFragment(container) {
+    const src = container.dataset.sectionSrc || container.dataset.section;
+    if (!src) return;
+    const rootHolder = container.closest('[data-section-root]');
+    const root = rootHolder && rootHolder.dataset.sectionRoot ? rootHolder.dataset.sectionRoot.replace(/\/$/, '') : '';
+    const url = root ? `${root}/${src}` : src;
+
 
     try {
       const response = await fetch(url);

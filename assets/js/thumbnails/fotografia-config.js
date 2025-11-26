@@ -52,9 +52,11 @@
     {
       id: 'menu-2',
       key: 'sectionTwo',
+
       galleryKey: 'sectionTwo',
       className: 'gallery-section gallery-two',
       meta: '2025 Club Palestino – Evento Carolina Saieh – Fotografía',
+
       title: 'Section 2',
       defaultDescription,
       items: [
